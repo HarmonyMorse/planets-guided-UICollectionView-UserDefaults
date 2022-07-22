@@ -8,6 +8,7 @@
 
 import Foundation
 
+// Make an extension on String itself
 extension String {
     static var shouldShowPlutoKey = "ShouldShowPluto"
 }
