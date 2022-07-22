@@ -16,11 +16,19 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func changeShouldShowPluto(_ sender: UISwitch) {
+        
+        // Set whether Pluto should be a planet or not in UserDefaults
         let userDefaults = UserDefaults.standard
+        // Access UserDefaults - userDefaults.
+        // Set a Bool - .set(
+        // Set Bool to if the Pluto as a planet is true or false - sender.isOn
+        // Because of extension on String in SettingsKey - .shouldShowPluto key (makes sure there won't be any typos)
+        // Can also do String.shouldShowPlutoKey, almost like a enum
         userDefaults.set(sender.isOn, forKey: .shouldShowPlutoKey)
     }
     
     private func updateViews() {
+        // Get whether Pluto should be a planet or not from userDefauults
         let userDefaults = UserDefaults.standard
         shouldShowPlutoSwitch.isOn = userDefaults.bool(forKey: .shouldShowPlutoKey)
     }

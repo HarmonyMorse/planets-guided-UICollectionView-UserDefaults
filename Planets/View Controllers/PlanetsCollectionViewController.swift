@@ -31,7 +31,18 @@ class PlanetsCollectionViewController: UICollectionViewController, UIPopoverPres
         cell.imageView.image = planet.image
         cell.textLabel.text = planet.name
         
-        return cell
+         return cell
+        
+        /* Because of the changes in PlanetCollectionViewCell, we can do this instead:
+        
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as? PlanetCollectionViewCell else { fatalError("Cell is not a PlanetCollectionViewCell") }
+        
+        let planet = planetController.planets[indexPath.row]
+        
+        cell.planet = planet
+         
+         return cell*/
+        
     }
     
     // MARK: UICollectionViewDelegate

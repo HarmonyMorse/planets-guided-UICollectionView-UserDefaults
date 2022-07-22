@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AAb-xx-CdQ">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AAb-xx-CdQ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,7 +13,7 @@
             <objects>
                 <collectionViewController id="keT-FZ-FXm" customClass="PlanetsCollectionViewController" customModule="Planets" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="T0m-OS-aMT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3c3-Y7-cJg">
@@ -32,7 +30,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="120" height="140"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ULd-5w-9mF">
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ULd-5w-9mF">
                                             <rect key="frame" x="0.0" y="0.0" width="120" height="140"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VeN-S0-cGk">
@@ -90,7 +88,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pkr-A0-RiC">
-                                <rect key="frame" x="20" y="80" width="335" height="31"/>
+                                <rect key="frame" x="20" y="124" width="335" height="31"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is Pluto a planet?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdO-GJ-pMy">
                                         <rect key="frame" x="0.0" y="0.0" width="286" height="31"/>
@@ -106,14 +104,15 @@
                                     </switch>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="szw-Nr-YK2">
-                                <rect key="frame" x="322" y="10" width="37" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="szw-Nr-YK2">
+                                <rect key="frame" x="322" y="54" width="37" height="30"/>
                                 <state key="normal" title="Done"/>
                                 <connections>
                                     <segue destination="SFG-xX-sjH" kind="unwind" unwindAction="unwindToPlanetsCollectionViewController:" id="YOm-Qt-ejE"/>
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="i3s-jp-ulm"/>
                         <constraints>
                             <constraint firstItem="i3s-jp-ulm" firstAttribute="trailing" secondItem="pkr-A0-RiC" secondAttribute="trailing" constant="20" id="B2c-5y-E9L"/>
                             <constraint firstItem="pkr-A0-RiC" firstAttribute="leading" secondItem="i3s-jp-ulm" secondAttribute="leading" constant="20" id="FfW-ih-4qm"/>
@@ -121,7 +120,6 @@
                             <constraint firstItem="i3s-jp-ulm" firstAttribute="trailing" secondItem="szw-Nr-YK2" secondAttribute="trailing" constant="16" id="kzn-Nb-62t"/>
                             <constraint firstItem="pkr-A0-RiC" firstAttribute="top" secondItem="i3s-jp-ulm" secondAttribute="top" constant="80" id="xGT-nc-oko"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="i3s-jp-ulm"/>
                     </view>
                     <value key="contentSizeForViewInPopover" type="size" width="375" height="200"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -133,29 +131,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="irh-Le-Hmb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="SFG-xX-sjH" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1583" y="-306"/>
+            <point key="canvasLocation" x="2083" y="-143"/>
         </scene>
         <!--Planet Detail View Controller-->
         <scene sceneID="Npi-8O-xaG">
             <objects>
                 <viewController id="LSU-Mb-HI5" customClass="PlanetDetailViewController" customModule="Planets" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oKm-Ur-rt9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VEO-5n-v0D">
-                                <rect key="frame" x="0.0" y="64" width="375" height="280"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="280"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="280" id="Fm7-Gy-6S9"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZV7-KI-LHE">
-                                <rect key="frame" x="166.5" y="352" width="42" height="21"/>
+                                <rect key="frame" x="186" y="376" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="NwE-Su-pxt"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="VEO-5n-v0D" firstAttribute="leading" secondItem="NwE-Su-pxt" secondAttribute="leading" id="FGk-5H-gWm"/>
@@ -164,7 +163,6 @@
                             <constraint firstItem="VEO-5n-v0D" firstAttribute="trailing" secondItem="NwE-Su-pxt" secondAttribute="trailing" id="qDB-ip-IbX"/>
                             <constraint firstItem="ZV7-KI-LHE" firstAttribute="top" secondItem="VEO-5n-v0D" secondAttribute="bottom" constant="8" id="tD8-vm-hUn"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="NwE-Su-pxt"/>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="VEO-5n-v0D" id="D5o-St-Vf9"/>
@@ -173,7 +171,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pai-fZ-gNc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2061.5999999999999" y="144.3778110944528"/>
+            <point key="canvasLocation" x="2083" y="283"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hgW-K2-TaZ">
@@ -181,7 +179,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AAb-xx-CdQ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="h8c-as-0HM">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
